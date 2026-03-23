@@ -7,27 +7,43 @@
 
 body {
     background-color: #f4f6f9;
+    color: #333;
 }
 
 header {
-    background-color: #1f4e79;
+    background: #0078D4;
     color: white;
-    padding: 15px;
     text-align: center;
+    padding: 20px;
 }
 
-.container {
-    width: 95%;
-    max-width: 1200px;
-    margin: 20px auto;
-    background: white;
+header h1 {
+    margin-bottom: 5px;
+}
+
+main {
+    padding: 20px;
+}
+
+.dashboard-container {
+    position: relative;
+    width: 100%;
+    padding-top: 50%; /* Responsivo */
+}
+
+.dashboard-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    overflow: hidden;
 }
 
-iframe {
-    width: 100%;
-    height: 80vh;
-    border: none;
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #eee;
+    margin-top: 20px;
 }
