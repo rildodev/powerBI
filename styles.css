@@ -1,18 +1,10 @@
 :root {
     --bg: #f4f6f9;
-    --card: #ffffff;
     --primary: #0078D4;
     --text: #333;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #1e1e2f;
-        --card: #2a2a3d;
-        --text: #f1f1f1;
-    }
-}
-
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -20,72 +12,72 @@
     font-family: Arial, sans-serif;
 }
 
+/* CORPO */
 body {
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
     background: var(--bg);
     color: var(--text);
 }
 
-/* Layout */
+/* LAYOUT PRINCIPAL */
 .app {
     display: flex;
+    width: 100%;
     height: 100vh;
-    overflow: hidden;
 }
 
-/* Sidebar menor */
+/* SIDEBAR */
 .sidebar {
     width: 180px;
     background: var(--primary);
-    color: white;
+    color: #fff;
     padding: 15px;
 }
 
-/* Conteúdo */
+/* CONTEÚDO */
 .main {
     flex: 1;
     display: flex;
     flex-direction: column;
+    height: 100vh;
 }
 
-/* Topo mais compacto */
+/* TOPO */
 .topbar {
-    background: var(--card);
     padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background: #fff;
+    flex-shrink: 0;
+    border-bottom: 1px solid #ddd;
 }
 
-/* Área principal ocupa tudo */
+/* ÁREA DO DASHBOARD */
 .content {
     flex: 1;
-    padding: 10px;
+    display: flex;
+    padding: 0; /* remove espaços */
 }
 
-/* Card ocupa tudo */
+/* CARD */
 .card {
-    width: 100%;
-    height: 100%;
-    background: var(--card);
-    border-radius: 10px;
-    padding: 5px;
+    flex: 1;
+    display: flex;
+    padding: 0;
+    margin: 0;
 }
 
-/* 🔥 IFRAME AGORA GRANDE */
+/* 🔥 CORREÇÃO PRINCIPAL */
 .card iframe {
     width: 100%;
-    height: calc(1000vh - 70px); /* ocupa quase toda a tela */
+    height: 100%;
     border: none;
-    border-radius: 8px;
+    display: block;
 }
 
-/* Mobile */
+/* RESPONSIVO */
 @media (max-width: 768px) {
     .sidebar {
         display: none;
-    }
-
-    .card iframe {
-        height: calc(100vh - 60px);
     }
 }
