@@ -1,52 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Power BI</title>
+    <title>Painel de Acompanhamento</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="app">
+    <nav class="navbar">
+        <h1>PAINEL DE ACOMPANHENTO</h1>
+    </nav>
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <h2>📊 BI System</h2>
-        <nav>
-            <ul>
-                <li class="active">Dashboard</li>
-                <li>Relatórios</li>
-                <li>Indicadores</li>
-                <li>Configurações</li>
-            </ul>
-        </nav>
-    </aside>
-
-    <!-- Conteúdo -->
-    <div class="main">
-
-        <!-- Topo -->
-        <header class="topbar">
-            <h1>Dashboard</h1>
-            <span class="status"><span class="status">🕒 Atualizado em 23/03/2026 às 12:59</span></span>
-        </header>
-
-        <!-- Dashboard -->
-        <section class="content">
-            <div class="card">
-                <iframe 
-                    title="lab01"
-                    src="https://app.powerbi.com/view?r=eyJrIjoiYzVlYmYxY2QtN2QxMC00ZjU4LThlMjUtOTg4NGRhYTQ5NmMzIiwidCI6IjMxMmMzZDBlLTVkODgtNDFiMC1hNDA0LTQzNzExNWViNWE5YyJ9"
-                    frameborder="0"
-                    allowFullScreen="true">
-                </iframe>
-            </div>
-        </section>
-
+    <div>
+        <p>Portal atualizado em: 23 de março de 2026 às 12:59h</p>
     </div>
-</div>
+    
+    <main class="container">
+        <iframe title="lab01"
+            src="https://app.powerbi.com/view?r=eyJrIjoiYzVlYmYxY2QtN2QxMC00ZjU4LThlMjUtOTg4NGRhYTQ5NmMzIiwidCI6IjMxMmMzZDBlLTVkODgtNDFiMC1hNDA0LTQzNzExNWViNWE5YyJ9"
+            frameborder="0" allowFullScreen="true">
+        </iframe>
+    </main>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
