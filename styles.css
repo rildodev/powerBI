@@ -74,7 +74,7 @@ body {
 /* 🔥 IFRAME AGORA GRANDE */
 .card iframe {
     width: 100%;
-    height: calc(100vh - 70px); /* ocupa quase toda a tela */
+    height: calc(1000vh - 70px); /* ocupa quase toda a tela */
     border: none;
     border-radius: 8px;
 }
