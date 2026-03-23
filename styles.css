@@ -1,3 +1,18 @@
+:root {
+    --bg: #f4f6f9;
+    --card: #ffffff;
+    --primary: #0078D4;
+    --text: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #1e1e2f;
+        --card: #2a2a3d;
+        --text: #f1f1f1;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,44 +21,88 @@
 }
 
 body {
-    background-color: #f4f6f9;
-    color: #333;
+    background: var(--bg);
+    color: var(--text);
 }
 
-header {
-    background: #0078D4;
+/* Layout principal */
+.app {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: var(--primary);
     color: white;
-    text-align: center;
     padding: 20px;
 }
 
-header h1 {
-    margin-bottom: 5px;
+.sidebar h2 {
+    margin-bottom: 30px;
 }
 
-main {
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar li:hover,
+.sidebar .active {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Conteúdo */
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Topbar */
+.topbar {
+    background: var(--card);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Conteúdo */
+.content {
     padding: 20px;
+    flex: 1;
 }
 
-.dashboard-container {
-    position: relative;
-    width: 100%;
-    padding-top: 50%; /* Responsivo */
-}
-
-.dashboard-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Card */
+.card {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: var(--card);
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #eee;
-    margin-top: 20px;
+/* Iframe responsivo */
+.card iframe {
+    width: 100%;
+    height: 80vh;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
 }
